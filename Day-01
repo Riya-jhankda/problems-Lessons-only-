@@ -1,4 +1,6 @@
 //program for sum of N natural no.'s
+
+###Approach 1
 '''
 import java.util.Scanner;
 
@@ -9,6 +11,45 @@ class HelloWorld {
         
         int num= sc.nextInt();
         System.out.println(num*(num+1)/2);
+    }
+}
+'''
+
+###Approach 2
+
+'''
+import java.util.Scanner;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Sum of 1st n natural no.'s ");
+        Scanner sc = new Scanner(System.in);
+        int sum =0;
+        int num= sc.nextInt();
+        for(int i =0;i<=num;i++){
+            sum+=i;
+        }
+        System.out.println(sum);
+    }
+}
+'''
+###APProach 3
+'''
+
+import java.util.Scanner;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Sum of 1st n natural no.'s ");
+        Scanner sc = new Scanner(System.in);
+        int sum =0;
+        int num= sc.nextInt();
+        for(int i =0;i<=num;i++){
+            for(int j =1;j<=i;j++){
+                sum++;
+            }
+        }
+        System.out.println(sum);
     }
 }
 '''
