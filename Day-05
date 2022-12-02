@@ -1,0 +1,128 @@
+Palindrome for a number
+'''
+import java.util.Scanner;
+
+//Palindrome 
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Enter the no.");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.println(palindrome(n));
+
+    }
+    public static boolean palindrome(int n){
+        int temp = n;
+        int rev =0;
+        int num =0;
+        
+        while(temp!=0){
+            rev= temp%10;
+            num = num*10+rev;
+            temp=temp/10;
+            
+        }
+       
+        return (num==n);
+        
+    }
+'''
+
+FACTORIAL:
+loop->
+'''
+import java.util.Scanner;
+
+//Factorial of a num
+
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Enter the no.");
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int rev =1;
+        
+        for(int i=2;i<=num;i++){
+            rev=rev*i;
+        }
+        System.out.println(rev);
+    }
+}
+'''
+
+Recursive solution:
+'''
+import java.util.Scanner;
+
+//Factorial of a num
+
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Enter the no.");
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        System.out.println(fact(num));
+    }
+    public static int fact(int n){
+        if(n==0)
+         return 1;
+        return n*fact(n-1); 
+    }
+}
+'''
+
+Tell us trailing 0's in the factorial of  a num
+
+eg. n=5 , factorial = 120
+    0's in the end are = 1
+    
+    Case 1 : Naive appproach 
+'''    
+import java.util.Scanner;
+
+//Factorial of a num
+
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Enter the no.");
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int rev =1;
+        
+        for(int i=2;i<=num;i++){
+            rev=rev*i;
+        }
+        System.out.println(rev);
+        int trail =0;
+        while(rev%10==0){
+            trail++;
+            rev = rev/10;
+        }
+        System.out.printf(" \n no. of trailing zeroes are : %d"trail);
+        
+    }
+}
+'''
+
+Case 2 : smghdaar approach jo mughe khud smgh nhi aai hh
+
+'''
+import java.util.Scanner;
+
+//Factorial of a num
+
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Enter the no.");
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int rem = 0;
+        for(int i=5;i<=num;i=i*5){
+            rem= rem+ num/i;
+        }
+         System.out.println(rem);
+    }
+}
+'''
+    
+    
