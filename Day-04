@@ -1,0 +1,64 @@
+Ways to find no. of digits in a no.
+
+
+CASE 1:
+'''
+import java.util.Scanner;
+
+
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Enter the no.");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.println("no. of digits is");
+        System.out.println(digit(n));
+    }
+    public static int digit(int n){
+        if (n==0)
+            return 0;
+        return 1+digit(n/10);    
+    }
+}
+'''
+
+CASE 2:
+'''
+import java.util.Scanner;
+import java.lang.Math;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Enter the no.");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.println("no. of digits is");
+        System.out.println(digit(n));
+    }
+    public static double digit(int n){
+        return Math.floor(Math.log10(n))+1;
+    }
+}
+'''
+
+CASE 3:
+'''
+import java.util.Scanner;
+
+
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Enter the no.");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.println("no. of digits is");
+        int count =0;
+        while(n!=0){
+            count++;
+            n=n/10;
+        }
+        System.out.println(count);
+    }
+    
+}
+'''
